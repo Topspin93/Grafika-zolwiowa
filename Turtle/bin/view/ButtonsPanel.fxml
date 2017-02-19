@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox fx:id="buttonsPanelHBox" alignment="TOP_CENTER" maxHeight="50.0" minHeight="75.0" prefHeight="75.0" prefWidth="1260.0" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ButtonsPanelController">
+   <children>
+      <VBox spacing="5.0">
+         <children>
+            <HBox spacing="10.0">
+               <children>
+                  <TextField fx:id="textSetX" prefHeight="25.0" prefWidth="70.0" promptText="X" styleClass="textfields" />
+                  <TextField fx:id="textSetY" prefHeight="25.0" prefWidth="70.0" promptText="Y" styleClass="textfields" />
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#set" prefWidth="150.0" styleClass="buttony" stylesheets="@application.css" text="Ustaw" />
+         </children>
+      </VBox>
+      <VBox spacing="5.0">
+         <children>
+            <TextField fx:id="textForward" prefHeight="25.0" prefWidth="140.0" promptText="Naprzód" styleClass="textfields" />
+            <Button mnemonicParsing="false" onAction="#forward" prefWidth="140.0" styleClass="buttony" text="Naprzód" />
+         </children>
+      </VBox>
+      <VBox spacing="5.0">
+         <children>
+            <TextField fx:id="textRotate" prefHeight="25.0" prefWidth="140.0" promptText="Stopnie" styleClass="textfields" />
+            <Button mnemonicParsing="false" onAction="#rotate" prefWidth="140.0" styleClass="buttony" text="Obrót" />
+         </children>
+      </VBox>
+      <ColorPicker fx:id="colorPicker" minHeight="55.0" prefHeight="55.0" prefWidth="140.0" styleClass="buttony" />
+      <ToggleButton fx:id="buttonLift" minHeight="55.0" mnemonicParsing="false" onAction="#lift" prefHeight="55.0" prefWidth="140.0" styleClass="buttony" stylesheets="@application.css" text="Podnieś" />
+      <Button mnemonicParsing="false" onAction="#clearPane" prefHeight="55.0" prefWidth="140.0" styleClass="buttony" text="Czyść" />
+      <HBox fx:id="loadHBox" disable="true" prefHeight="55.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#executeCommands" prefHeight="55.0" prefWidth="140.0" styleClass="buttony" text="Wykonaj komendy" />
+            <Button mnemonicParsing="false" onAction="#nextCommand" prefHeight="55.0" prefWidth="140.0" styleClass="buttony" text="Następny krok" />
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</HBox>
